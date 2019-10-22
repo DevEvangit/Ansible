@@ -109,7 +109,7 @@
   - name: Copy SSH ID
     shell: |
       ssh-copy-id "{{ adminUser }}@{{ webserver_ip_fact }}"
-        - name: Get facts for webserver Public IP
+  - name: Get facts for webserver Public IP
     azure_rm_publicipaddress_facts:
       resource_group: "{{ resource_group }}"
       name: "public_ip_webserver"
